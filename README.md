@@ -12,3 +12,7 @@ iptables -t nat -A POSTROUTING -s 192.168.18.0/24 -o oet1 -j MASQUERADE
 ```
 
 *add a new VAP in Wireless_Basic.asp ![VAP](images/vap.png)
+
+Now after you connect to VAP, all traffic will forward to wireguard
+
+NOTICE: MUST `disable AP Isolation` for Google home 
