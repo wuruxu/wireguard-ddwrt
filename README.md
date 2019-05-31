@@ -11,7 +11,7 @@ ip route add table 100 192.168.8.0/24 via 192.168.8.1 dev br0
 iptables -t nat -A POSTROUTING -s 192.168.18.0/24 -o oet1 -j MASQUERADE
 ```
 
-*add a new VAP in Wireless_Basic.asp ![VAP](images/vap.png)
+* add a new VAP in Wireless_Basic.asp ![VAP](images/vap.png)
 
 * Services -> Services and ensure that DNSMasq is enabled, Enter the following into Additional DNSMasq Options: **dhcp-option=wl1.1,6,8.8.8.8,1.1.1.1** ![DNSMASQ](images/dnsmasq.png)
 
