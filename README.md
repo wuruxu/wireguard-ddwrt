@@ -7,7 +7,6 @@
 ```bash
 ip rule add from 192.168.18.0/24 lookup 100
 ip route add table 100 default via 192.168.2.1 dev oet1
-ip route add table 100 192.168.8.0/24 via 192.168.8.1 dev br0
 iptables -t nat -A POSTROUTING -s 192.168.18.0/24 -o oet1 -j MASQUERADE
 ```
 
