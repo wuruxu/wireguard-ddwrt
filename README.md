@@ -1,6 +1,6 @@
 # setup wireguard @ ddwrt
 
-* install latest ddwrt firmware, [BS build](https://download1.dd-wrt.com/dd-wrtv2/downloads/betas/2019/05-27-2019-r39866/) is recommended
+* install latest ddwrt firmware, [BS build](https://download1.dd-wrt.com/dd-wrtv2/downloads/betas/2019/07-04-2019-r40189/) is recommended
 * setup endpoint(VPN SERVER) config following [WireGuard](https://www.wireguard.com/)
 * setup peer config in ddwrt ![SETUP/TUNNEL](images/eop-tunnel.asp.png)
 * add startup firewall rules for wireguard oet1 (Administration/Command)
@@ -16,4 +16,7 @@ iptables -t nat -A POSTROUTING -s 192.168.18.0/24 -o oet1 -j MASQUERADE
 
 Now after you connect to VAP, all traffic will forward to wireguard
 
-NOTICE: MUST `disable AP Isolation` for Google home 
+NOTICE:
+* MUST `disable AP Isolation` for Google home setup      
+* If something wrong, try to `disable SFE(Shortcut Forwarding Engine)`  @ basic setup.
+
